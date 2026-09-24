@@ -1,6 +1,7 @@
 package isimm.ing1TD2_ouerhanisyrine
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -9,10 +10,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import isimm.ing1TD2_ouerhanisyrine.databinding.ActivityMainBinding
 import java.util.Date
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -38,6 +40,23 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+    }
+     */
+    private lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnLogin.setOnClickListener {
+            if(binding.etPassword.text.toString() == "pw"+binding.etUsername.text.toString()){
+                Toast.makeText(this,R.string.msg_success, Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,R.string.msg_error, Toast.LENGTH_SHORT).show()
+            }
+        }
+        binding.updateButton.setOnClickListener {
+            binding.dateTextView.text = Date().toString()
         }
     }
 }
