@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoginApp</string>
+    <string name="mytext">Welcome to My First Android Application</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="btn_login">Login</string>
     <string name="msg_success">Login successful</string>
     <string name="msg_error">Error: please try again</string>
+    <string name="logo_description">Loading photo</string>
+    <string name="update_date">Update date</string>
+    <string name="btn_date">Update Date and Time</string>
 </resources>

@@ -5,7 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_blue"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/img"
+        android:contentDescription="@string/logo_description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/mytextview"
@@ -14,64 +26,84 @@
         android:text="@string/mytext"
         android:textColor="@color/blue"
         android:textSize="@dimen/mydimen"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="109dp" />
+        android:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="16dp" />
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/whiteSection"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="24dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="210dp">
-
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/hint_username"
-            android:inputType="text"
-            android:padding="12dp" />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:padding="12dp" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#BA2813"
-            android:text="@string/btn_login" />
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/bg_white_top_rounded"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="122dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_username"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
 
             <Button
-                android:id="@+id/updateButton"
-                android:layout_width="wrap_content"
+                style="@style/CustomButton"
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#EF0A0A"
-                android:text="Update Date and Time" />
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primaryColor"
+                android:text="@string/btn_login" />
 
-            <TextView
-                android:id="@+id/dateTextView"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Update date" />
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/CustomButton"
+                    android:id="@+id/updateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/secondaryColor"
+                    android:text="@string/btn_date" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="20dp"
+                    android:text="@string/update_date" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
