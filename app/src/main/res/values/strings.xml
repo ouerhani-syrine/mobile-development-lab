@@ -9,4 +9,5 @@
     <string name="logo_description">Chargement de photo</string>
     <string name="update_date">Modifier la date</string>
     <string name="btn_date">Modifier la date et le temps</string>
+    <string name="welcome">Bienvenue !</string>
 </resources>

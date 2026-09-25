@@ -1,5 +1,6 @@
 package isimm.ing1TD2_ouerhanisyrine
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             if(binding.etPassword.text.toString() == "pw"+binding.etUsername.text.toString()){
                 Toast.makeText(this,R.string.msg_success, Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, WelcomeActivity::class.java)
+                startActivity(intent)
             }else{
                 Toast.makeText(this,R.string.msg_error, Toast.LENGTH_SHORT).show()
             }

@@ -10,4 +10,5 @@
     <string name="logo_description">Loading photo</string>
     <string name="update_date">Update date</string>
     <string name="btn_date">Update Date and Time</string>
+    <string name="welcome">Welcome !</string>
 </resources>
