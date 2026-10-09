@@ -11,4 +11,17 @@
     <string name="update_date">Update date</string>
     <string name="btn_date">Update Date and Time</string>
     <string name="welcome">Welcome !</string>
+    <string name="calcul_btn">calculate</string>
+    <string name="conversion_btn">Conversion</string>
+    <string name="radio_somme">sum</string>
+    <string name="radio_racinecarre">square</string>
+    <string name="edittextval1">Value</string>
+    <string name="edittextval2">Second value</string>
+    <string name="notEmpty1">The first value must not be empty.</string>
+    <string name="notEmpty2">The second value must not be empty.</string>
+    <string name="num1">The first value must be numeric.</string>
+    <string name="num2">The second value must be numeric.</string>
+    <string name="currencyVal">Donner une valeur ...</string>
+    <string name="resultat">result</string>
+    <string name="notEmpty">The value must not be empty.</string>
 </resources>
