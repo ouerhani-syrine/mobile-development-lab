@@ -21,7 +21,10 @@
     <string name="notEmpty2">The second value must not be empty.</string>
     <string name="num1">The first value must be numeric.</string>
     <string name="num2">The second value must be numeric.</string>
-    <string name="currencyVal">Donner une valeur ...</string>
+    <string name="currencyVal">Assign a value ...</string>
     <string name="resultat">result</string>
     <string name="notEmpty">The value must not be empty.</string>
+    <string name="currencybt1">Tunisian Dinar --> Euro</string>
+    <string name="currencybt2">Euro --> Tunisian Dinar</string>
+    <string name="currencyRes">Conversion result</string>
 </resources>

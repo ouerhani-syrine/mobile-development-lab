@@ -24,5 +24,9 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(this, ComputeActivity::class.java)
             startActivity(intent)
         }
+        binding.conversionBtn.setOnClickListener {
+            val intent = Intent(this, CurrencyActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

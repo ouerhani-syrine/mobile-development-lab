@@ -20,7 +20,11 @@
     <string name="notEmpty2">La deuxieme valeur doit etre non vide</string>
     <string name="num1">La premiere valeur doit etre numerique</string>
     <string name="num2">La deuxieme valeur doit etre numerique</string>
-    <string name="currencyVal">Assign a value ...</string>
+    <string name="currencyVal">Donner une valeur ...</string>
     <string name="resultat">resultat</string>
     <string name="notEmpty">La valeur doit etre non vide</string>
+    <string name="currencybt1">DINAR TUNISIEN --> EURO</string>
+    <string name="currencybt2">EURO --> DINAR TUNISIEN</string>
+    <string name="currencyRes">Résultat de conversion</string>
+    <string name="typeFloat">La valeur doit etre </string>
 </resources>
