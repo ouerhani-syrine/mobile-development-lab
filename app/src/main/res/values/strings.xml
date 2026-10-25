@@ -26,5 +26,6 @@
     <string name="currencybt1">DINAR TUNISIEN --> EURO</string>
     <string name="currencybt2">EURO --> DINAR TUNISIEN</string>
     <string name="currencyRes">Résultat de conversion</string>
-    <string name="typeFloat">La valeur doit etre </string>
+    <string name="conversion_result_dt_to_euro">L’équivalent de %1$.2f DT en Euro est : %2$.2f €</string>
+    <string name="conversion_result_euro_to_dt">L’équivalent de %1$.2f € en DT est : %2$.2f DT</string>
 </resources>

@@ -1,5 +1,7 @@
 package isimm.ing1TD2_ouerhanisyrine
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.CalendarContract
@@ -14,6 +16,7 @@ import java.util.zip.Inflater
 
 class CurrencyActivity : AppCompatActivity() {
     lateinit var binding: ActivityCurrencyBinding
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,8 +28,8 @@ class CurrencyActivity : AppCompatActivity() {
             insets
         }
         binding.bt1.setOnClickListener {
-            binding.bt1.setBackgroundColor(Color.DKGRAY)
-            binding.bt2.setBackgroundColor(ContextCompat.getColor(this,R.color.primaryColor))
+            binding.bt1.setBackgroundColor(getColor(R.color.btn_inactive))
+            binding.bt2.setBackgroundColor(getColor(R.color.primaryColor))
             var a = binding.edit1.text.toString()
             if(a.isBlank()){
                 Toast.makeText(this,R.string.notEmpty, Toast.LENGTH_LONG).show()
@@ -37,11 +40,15 @@ class CurrencyActivity : AppCompatActivity() {
                 Toast.makeText(this,R.string.num1, Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            binding.resultat.text = a+" DT = "+ (an/3.40f).toString()+" €"
+            //binding.resultat.text = a+" DT = "+ (an/3.40f).toString()+" €"
+            val intent = Intent(this, ConversionActivity::class.java)
+            intent.putExtra("montant",an)
+            intent.putExtra("type","DT_TO_EURO")
+            startActivity(intent)
         }
         binding.bt2.setOnClickListener {
-            binding.bt2.setBackgroundColor(Color.DKGRAY)
-            binding.bt1.setBackgroundColor(ContextCompat.getColor(this,R.color.primaryColor))
+            binding.bt2.setBackgroundColor(getColor(R.color.btn_inactive))
+            binding.bt1.setBackgroundColor(getColor(R.color.primaryColor))
             var a = binding.edit1.text.toString()
             if(a.isBlank()){
                 Toast.makeText(this,R.string.notEmpty, Toast.LENGTH_LONG).show()
@@ -52,7 +59,11 @@ class CurrencyActivity : AppCompatActivity() {
                 Toast.makeText(this,R.string.num1, Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            binding.resultat.text = a+" DT = "+ (an*3.40f).toString()+" €"
+            //binding.resultat.text = a+" € = "+ (an*3.40f).toString()+" DT"
+            val intent = Intent(this, ConversionActivity::class.java)
+            intent.putExtra("montant",an)
+            intent.putExtra("type","EURO_TO_DT")
+            startActivity(intent)
         }
     }
 }

@@ -6,4 +6,5 @@
     <color name="primaryColor">#80dfff</color>
     <color name="secondaryColor">#0099cc</color>
     <color name="blue">#0000FF</color>
+    <color name="btn_inactive">#69696F</color>
 </resources>
