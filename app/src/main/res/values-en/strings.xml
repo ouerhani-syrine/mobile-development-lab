@@ -29,4 +29,7 @@
     <string name="currencyRes">Conversion result</string>
     <string name="conversion_result_dt_to_euro">The equivalent of %1$.2f DT in Euros is: %2$.2f €</string>
     <string name="conversion_result_euro_to_dt">The equivalent of €%1$.2f in DT is: %2$.2f DT</string>
+    <string name="envRes">send Result</string>
+    <string name="terminer">terminate</string>
+    <string name="aucun">No results received</string>
 </resources>

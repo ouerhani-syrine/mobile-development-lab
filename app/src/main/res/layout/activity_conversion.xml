@@ -16,4 +16,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_env"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/envRes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_terminer"
+        app:layout_constraintTop_toBottomOf="@id/resText"/>
+
+    <Button
+        android:id="@+id/btn_terminer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terminer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_env"
+        app:layout_constraintTop_toBottomOf="@id/resText"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

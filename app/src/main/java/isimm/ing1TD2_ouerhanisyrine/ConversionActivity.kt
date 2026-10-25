@@ -1,6 +1,8 @@
 package isimm.ing1TD2_ouerhanisyrine
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
@@ -22,10 +24,23 @@ class ConversionActivity : AppCompatActivity() {
         }
         val montant = intent.getFloatExtra("montant",0.0f)
         val typeConv = intent.getStringExtra("type")
+        var res = ""
         if(typeConv == "DT_TO_EURO"){
-            binding.resText.text = getString(R.string.conversion_result_dt_to_euro,montant,montant/3.40f)
+            res = getString(R.string.conversion_result_dt_to_euro,montant,montant/3.40f)
+            binding.resText.text = res
         }else {
-            binding.resText.text = getString(R.string.conversion_result_euro_to_dt,montant,montant*3.40f)
+            res = getString(R.string.conversion_result_euro_to_dt,montant,montant*3.40f)
+            binding.resText.text = res
+        }
+        binding.btnEnv.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra("resultat",res)
+            setResult(RESULT_OK,intent)
+            finish()
+        }
+        binding.btnTerminer.setOnClickListener {
+            setResult(RESULT_CANCELED)
+            finish()
         }
     }
 }

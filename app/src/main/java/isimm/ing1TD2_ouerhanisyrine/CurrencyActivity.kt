@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -16,7 +17,12 @@ import java.util.zip.Inflater
 
 class CurrencyActivity : AppCompatActivity() {
     lateinit var binding: ActivityCurrencyBinding
-    @SuppressLint("ResourceAsColor")
+    var launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        when(it.resultCode){
+            RESULT_OK -> binding.resultat.text = it.data?.getStringExtra("resultat")
+            RESULT_CANCELED -> Toast.makeText(this,R.string.aucun,Toast.LENGTH_LONG).show()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,7 +50,8 @@ class CurrencyActivity : AppCompatActivity() {
             val intent = Intent(this, ConversionActivity::class.java)
             intent.putExtra("montant",an)
             intent.putExtra("type","DT_TO_EURO")
-            startActivity(intent)
+            //startActivity(intent)
+            launcher.launch(intent)
         }
         binding.bt2.setOnClickListener {
             binding.bt2.setBackgroundColor(getColor(R.color.btn_inactive))
@@ -63,7 +70,8 @@ class CurrencyActivity : AppCompatActivity() {
             val intent = Intent(this, ConversionActivity::class.java)
             intent.putExtra("montant",an)
             intent.putExtra("type","EURO_TO_DT")
-            startActivity(intent)
+            //startActivity(intent)
+            launcher.launch(intent)
         }
     }
 }

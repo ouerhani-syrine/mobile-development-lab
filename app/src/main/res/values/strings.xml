@@ -28,4 +28,7 @@
     <string name="currencyRes">Résultat de conversion</string>
     <string name="conversion_result_dt_to_euro">L’équivalent de %1$.2f DT en Euro est : %2$.2f €</string>
     <string name="conversion_result_euro_to_dt">L’équivalent de %1$.2f € en DT est : %2$.2f DT</string>
+    <string name="envRes">envoyer Résultat</string>
+    <string name="terminer">terminer</string>
+    <string name="aucun">Aucun résultat recu</string>
 </resources>
