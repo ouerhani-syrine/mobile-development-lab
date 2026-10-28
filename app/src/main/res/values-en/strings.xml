@@ -32,4 +32,8 @@
     <string name="envRes">send Result</string>
     <string name="terminer">terminate</string>
     <string name="aucun">No results received</string>
+    <string name="btn_temp">Temprature Conversion</string>
+    <string name="CestoFah">Celsius --> Fahrenheit</string>
+    <string name="FahtoCes">Fahrenheit --> Celsius</string>
+    <string name="arrondir">Round</string>
 </resources>

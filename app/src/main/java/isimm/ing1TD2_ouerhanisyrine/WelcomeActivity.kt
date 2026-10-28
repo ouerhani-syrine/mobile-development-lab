@@ -28,5 +28,9 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(this, CurrencyActivity::class.java)
             startActivity(intent)
         }
+        binding.temp.setOnClickListener {
+            val intent = Intent(this, TemperatureActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

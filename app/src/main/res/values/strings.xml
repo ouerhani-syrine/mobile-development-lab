@@ -31,4 +31,8 @@
     <string name="envRes">envoyer Résultat</string>
     <string name="terminer">terminer</string>
     <string name="aucun">Aucun résultat recu</string>
+    <string name="btn_temp">Conversion de temperature</string>
+    <string name="CestoFah">Celsius --> Fahrenheit</string>
+    <string name="FahtoCes">Fahrenheit --> Celsius</string>
+    <string name="arrondir">Arrondir</string>
 </resources>

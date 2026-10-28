@@ -29,4 +29,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp" />
 
+    <Button
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="132dp"
+        android:text="@string/btn_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/calcul_btn" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
